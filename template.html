@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <!-- sidebar section -->
+            <div class="col-12 col-lg-2 col-xl-3 vh-100 d-none d-lg-block sidebar">
+                <div class="row d-flex justify-content-between align-items-center p-2 my-3">
+                    <div class="brand">
+                        <span class="font-weight-bolder h5">Admin Dashboard</span>
+                    </div>
+                    <button class="hide-sidebar btn btn-light d-block d-lg-none">
+                        <i class="feather-x text-dark"></i>
+                    </button>
+                </div>
+                
+            </div>
+            <!-- ======= main section ======= -->
+            <div class="col-12 col-lg-10 col-xl-9 vh-100 main">
+                <div class="row header mb-4">
+                    <div class="col-12">
+                        <div class="p-2 bg-primary rounded d-flex justify-content-between align-items-center">
+                            <div class="show-sidebar d-block d-lg-none">
+                                <i class="feather-menu text-light"></i>
+                            </div>
+                            <form action=""class="d-none d-md-block">
+                                <div class="form-inline">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <button class="btn btn-light ml-2">
+                                        <i class="feather-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                  <img src="img/user/avatar1.jpg" class="img-fluid user-profile" alt=""> Ah Di
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-4 card-status" onclick="local('https://google.com')">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <i class="feather-shopping-bag h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-8">
+                                        <p class="h3 counterUp">45</p>
+                                        <p class="text-secondary">Today Order</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-4 card-status" onclick="local('https://facebook.com')">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <i class="feather-user h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-8">
+                                        <p class="h3 counterUp">381</p>
+                                        <p class="text-secondary">Total User</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-4 card-status" onclick="local('https://www.linkedin.com/feed/')">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <i class="feather-package h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-8">
+                                        <p class="h3 counterUp">95</p>
+                                        <p class="text-secondary">Today Order</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                        <div class="card mb-4 card-status" onclick="local('https://youtube.com')">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <i class="feather-map-pin h1 text-primary"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <p class="h3 counterUp">14</p>
+                                        <p class="text-secondary">Support Location</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+                <!-- ====== chart ====== -->
+                <div class="row">
+                    <div class="col-12 col-lg-12 col-xl-7">
+                        <div class="card overflow-hidden shadow">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <p class="text-primary h4">Orders & Viewers</p>
+                                <div class="users">
+                                    <img src="img/user/avatar1.jpg" alt="" class="viewer-user rounded-circle">
+                                    <img src="img/user/avatar2.jpg" alt="" class="viewer-user rounded-circle">
+                                    <img src="img/user/avatar3.jpg" alt="" class="viewer-user rounded-circle">
+                                    <img src="img/user/avatar4.jpg" alt="" class="viewer-user rounded-circle">
+                                    <img src="img/user/avatar5.jpg" alt="" class="viewer-user rounded-circle">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="viewer" height="150"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="vendor/jquery-3.3.1.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/way_point/jquery.waypoints.js"></script>
+<script src="vendor/counter_up/counter_up.js"></script>
+<script src="vendor/chart_js/Chart.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

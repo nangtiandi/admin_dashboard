@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --primary-soft: #f3f3f3;
+}
+/* ========sidebar code ======== */
+
+/* ======== main code ======= */
+.main{
+    background-color: var(--primary-soft);
+    overflow: scroll;
+    box-shadow: 0 0 5px 1px #d3cdd8 inset;
+}
+.header{
+    position: sticky;
+    top: .1rem;
+    z-index: 10000;
+}
+.feather-menu{
+    font-size: 1.8em;
+}
+.user-profile{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.card{
+    border: none;
+}
+.card-status{
+    transition: .3s;
+}
+.card-status:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+.card-status:active{
+    transform: scale(1.04);
+}
+.viewer-user{
+    margin-left: -25px;
+}
+@media screen and (max-width: 780px){
+    .sidebar{
+        position: fixed;
+        width: 300px;
+        background-color: #fff;
+        display: block !important;
+        z-index: 11000;
+        margin-left: -100%;
+    }
+}
